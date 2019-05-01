@@ -2,8 +2,8 @@ package ejerciciosPNT;
 
 
 public abstract class Productos implements Comparable<Productos>{
-	String nombre;
-	int precio;
+	protected String nombre;
+	protected int precio;
 	public Productos(String nombre, int precio){
 		this.nombre=nombre;
 		this.precio=precio;
@@ -17,8 +17,7 @@ public abstract class Productos implements Comparable<Productos>{
 	//COMPARA LOS PRODUCTOS
 	public int compareTo(Productos o) {
 		
-	    return this.precio > o.precio ?
-	        1 : this.precio < o.precio ? -1 : 0;
+	    return this.precio > o.precio ? 1 : this.precio < o.precio ? -1 : 0;
 	}
 	
 }

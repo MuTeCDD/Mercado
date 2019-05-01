@@ -1,7 +1,7 @@
 package ejerciciosPNT;
 
 public class Frutillas extends Productos {
-	String uniPeso;
+	private String uniPeso;
 	public Frutillas(String nombre, int precio, String uniPeso) {
 		super(nombre, precio);
 		this.uniPeso=uniPeso;

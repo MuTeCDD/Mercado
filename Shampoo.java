@@ -1,7 +1,7 @@
 package ejerciciosPNT;
 
 public class Shampoo extends Productos {
-	int contenido;
+	private int contenido;
 	public Shampoo(String nombre, int precio, int contenido) {
 		super(nombre, precio);
 		this.contenido=contenido;

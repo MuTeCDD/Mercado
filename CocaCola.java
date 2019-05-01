@@ -1,7 +1,7 @@
 package ejerciciosPNT;
 
 public class CocaCola extends Productos {
-	double litros;
+	private double litros;
 	public CocaCola(String nombre, int precio, double litros) {
 		super(nombre, precio);
 		this.litros=litros;
