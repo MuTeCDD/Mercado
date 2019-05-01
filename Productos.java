@@ -1,7 +1,7 @@
 package ejerciciosPNT;
 
 
-public class Productos implements Comparable<Productos>{
+public abstract class Productos implements Comparable<Productos>{
 	String nombre;
 	int precio;
 	public Productos(String nombre, int precio){
@@ -12,6 +12,8 @@ public class Productos implements Comparable<Productos>{
 	public String getNombre(){
 		return nombre;
 	}
+	//Metodo que tiene que ser reemplazado para cargar todos los objetos 
+	public abstract void detalles();
 	//COMPARA LOS PRODUCTOS
 	public int compareTo(Productos o) {
 		

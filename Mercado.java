@@ -17,20 +17,27 @@ public class Mercado {
 		this.listaDeProductos.add(prod);
 	}
 
-	//AYUDA A QUE EL PROGRAMA ORGANICE LOS PRODUCTOS
+	//Crea la lista
 	public void Productos() {
 		Productos z=new CocaCola("Coca-Cola Zero", 20,1.5);
 		Productos cc=new CocaCola("Coca-Cola", 18,1.5);
 		Productos ss=new Shampoo("Shampoo Sedal", 19, 500);
 		Productos f=new Frutillas("Frutillas",64,"kilo" );
-
+		//Los agrega a la lista
 		this.agregarProducto(z);
 		this.agregarProducto(cc);
 		this.agregarProducto(ss);
 		this.agregarProducto(f);
 	}
+	//Metodo que contiene todos los objetos
+	public void metXprod() {
+		for ( Productos producto : listaDeProductos) {
+			producto.detalles();
+		}
+		System.out.println("=============================");
+	}
 	
-	//MUESTRA EL PRODCUTO MAS CARO
+	//Muestra el producto mas caro
 	public void masCaro() {
 		Productos max;
 		max=this.listaDeProductos.get(0);
@@ -43,7 +50,7 @@ public class Mercado {
 		System.out.println("Producto más caro: "+max.getNombre()); 
 	}
 	
-	//MUESTRA EL PRODUCTO MAS BARATO
+	//Muestra el producto mas barato
 	public void masBarato() {
 		Productos min;
 		min=this.listaDeProductos.get(0);

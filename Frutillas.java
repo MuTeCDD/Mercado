@@ -11,4 +11,10 @@ public class Frutillas extends Productos {
 		String prod="Nombre: "+nombre+" ///"+ "Precio: "+"$"+precio+" ///"+" Unidad de venta: "+uniPeso;
 		return prod;
 	}
+	@Override
+	public void detalles() {
+		System.out.println(this.toString());
+		
+	}
+	
 }

@@ -11,6 +11,12 @@ public class CocaCola extends Productos {
 		String prod="Nombre: "+nombre+" ///"+" Litros: "+litros+" ///"+" Precio: "+"$"+precio;
 		return prod;
 	}
+	@Override
+	public void detalles() {
+		System.out.println(this.toString());
+		
+	}
+	
 
 
 	
