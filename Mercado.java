@@ -1,7 +1,4 @@
 package ejerciciosPNT;
-
-
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,36 +26,29 @@ public class Mercado {
 		this.agregarProducto(ss);
 		this.agregarProducto(f);
 	}
-	//Metodo que contiene todos los objetos
-	public void metXprod() {
+	
+	//Metodo que muestra todos los productos y sus propiedades
+	public void imprimeProductos() {
 		for ( Productos producto : listaDeProductos) {
 			producto.detalles();
 		}
 		System.out.println("=============================");
 	}
 	
-	//Muestra el producto mas caro
-	public void masCaro() {
-		Productos max;
+	//Metodo que recorre la listas e imprime el producto mas barato y mas caro
+	public void maxYmin(){
+		Productos min, max;
 		max=this.listaDeProductos.get(0);
-		for (Productos producto : listaDeProductos) {
-
-			if (producto.compareTo(max)>0) {
+		min=this.listaDeProductos.get(0);
+		for(Productos producto: listaDeProductos){
+			if(producto.compareTo(max)>0){
 				max=producto;
 			}
-		}
-		System.out.println("Producto más caro: "+max.getNombre()); 
-	}
-	
-	//Muestra el producto mas barato
-	public void masBarato() {
-		Productos min;
-		min=this.listaDeProductos.get(0);
-		for (Productos producto : listaDeProductos) {
-			if (producto.compareTo(min)<0) {
+			if(producto.compareTo(min)<0){
 				min=producto;
 			}
 		}
-		System.out.println("Producto más barato: "+min.getNombre());
-		}
+		System.out.println("Producto mas caro: "+max.getNombre()+"\n"+""
+				+ "Producto mas barato: "+min.getNombre());
+	}
 }
